@@ -1,0 +1,4 @@
+#!/bin/bash
+while true; do 
+	diff -u --color=always <($@) <(sleep 1; $@) | sed "1,2d" | sed "1i ### `date` ###" 
+done
